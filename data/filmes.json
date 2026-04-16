@@ -1,35 +1,5 @@
 {
-    "weird_western": [
-        {
-            "id": "tt0076915",
-            "name": "The White Buffalo"
-        },
-        {
-            "id": "tt9178402",
-            "name": "The Pale Door"
-        },
-        {
-            "id": "tt1648190",
-            "name": "The Dark Tower"
-        },
-        {
-            "id": "tt2370410",
-            "name": "Revelation Trail"
-        },
-        {
-            "id": "tt0052718",
-            "name": "Curse of the Undead"
-        },
-        {
-            "id": "tt0090675",
-            "name": "The Aurora Encounter"
-        },
-        {
-            "id": "tt0039076",
-            "name": "Valley of the Zombies"
-        }
-    ],
-    "terror_e_tempestade": [
+    "Terror e Tempestade": [
         {
             "id": "tt0076786",
             "name": "Suspiria "
@@ -69,6 +39,74 @@
         {
             "id": "tt0072239",
             "name": "Symptoms "
+        }
+    ],
+    "Weird Western": [
+        {
+            "id": "tt0076915",
+            "name": "The White Buffalo"
+        },
+        {
+            "id": "tt9178402",
+            "name": "The Pale Door"
+        },
+        {
+            "id": "tt1648190",
+            "name": "The Dark Tower"
+        },
+        {
+            "id": "tt2370410",
+            "name": "Revelation Trail"
+        },
+        {
+            "id": "tt0052718",
+            "name": "Curse of the Undead"
+        },
+        {
+            "id": "tt0090675",
+            "name": "The Aurora Encounter"
+        },
+        {
+            "id": "tt0039076",
+            "name": "Valley of the Zombies"
+        }
+    ],
+    "Taboo": [
+        {
+            "id": "tt0815490",
+            "name": "Acne "
+        },
+        {
+            "id": "tt0457270",
+            "name": "Cyber Seduction"
+        },
+        {
+            "id": "tt3617996",
+            "name": "The Torture Club "
+        },
+        {
+            "id": "tt0078111",
+            "name": "Pretty Baby "
+        },
+        {
+            "id": "tt0101316",
+            "name": "The Lover "
+        },
+        {
+            "id": "tt0071483",
+            "name": "Wrong Move "
+        },
+        {
+            "id": "tt0106473",
+            "name": "The Boys of St. Vincent"
+        },
+        {
+            "id": "tt0150661",
+            "name": "14 and Under "
+        },
+        {
+            "id": "tt0091117",
+            "name": "The Girl "
         }
     ]
 }
