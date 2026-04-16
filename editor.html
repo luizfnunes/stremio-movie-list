@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stremio Addon Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="bg-slate-900 text-slate-100 min-h-screen p-4 md:p-8">
+
+    <div class="max-w-5xl mx-auto">
+        <header class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+            <div>
+                <h1 class="text-3xl font-bold text-white">🎬 Editor de Catálogo</h1>
+                <p class="text-slate-400">Gerencie categorias e filmes do seu Addon</p>
+            </div>
+            <div class="flex gap-2">
+                <input type="file" id="fileInput" accept=".json" class="hidden" onchange="loadFile(event)">
+                <button onclick="document.getElementById('fileInput').click()"
+                    class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded font-bold transition">
+                    <i class="fas fa-file-import mr-2"></i>Carregar JSON
+                </button>
+                <button onclick="downloadJSON()"
+                    class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded font-bold transition">
+                    <i class="fas fa-save mr-2"></i>Salvar Alterações
+                </button>
+            </div>
+        </header>
+
+        <div class="mb-6">
+            <button onclick="addCategory()"
+                class="bg-slate-700 hover:bg-slate-600 px-4 py-2 rounded border border-slate-600 transition">
+                <i class="fas fa-plus mr-2"></i>Nova Categoria
+            </button>
+        </div>
+
+        <div id="categoriesContainer" class="space-y-6">
+            <div class="text-center py-20 text-slate-500 border-2 border-dashed border-slate-700 rounded-xl">
+                Carregue o arquivo data/filmes.json para começar.
+            </div>
+        </div>
+
+        <div id="searchModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center p-4 z-50">
+            <div class="bg-slate-800 border border-slate-700 w-full max-w-lg rounded-2xl p-6 shadow-2xl">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold">Pesquisar Filme</h2>
+                    <button onclick="closeSearch()" class="text-slate-400 hover:text-white">&times;</button>
+                </div>
+                <input type="text" id="searchInput" oninput="searchMovies(this.value)"
+                    placeholder="Digite o nome do filme..."
+                    class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-2 mb-4 outline-none focus:border-blue-500">
+                <div id="searchResults" class="max-h-60 overflow-y-auto space-y-2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let db = {};
+
+        function loadFile(event) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                db = JSON.parse(e.target.result);
+                render();
+            };
+            reader.readAsText(event.target.files[0]);
+        }
+
+        function render() {
+            const container = document.getElementById('categoriesContainer');
+            container.innerHTML = '';
+
+            for (const [catId, films] of Object.entries(db)) {
+                const catDiv = document.createElement('div');
+                catDiv.className = "bg-slate-800 rounded-xl border border-slate-700 overflow-hidden shadow-lg";
+
+                catDiv.innerHTML = `
+                    <div class="bg-slate-700/50 p-4 flex justify-between items-center border-b border-slate-700">
+                        <div class="flex items-center gap-3">
+                            <input type="text" value="${catId}" onchange="renameCategory('${catId}', this.value)" 
+                                class="bg-slate-900 border border-slate-600 rounded px-2 py-1 font-mono text-sm text-blue-300 w-48">
+                            <span class="text-slate-400 text-sm">(${films.length} filmes)</span>
+                        </div>
+                        <button onclick="deleteCategory('${catId}')" class="text-red-400 hover:text-red-300 p-2">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <table class="w-full text-left text-sm">
+                            <thead>
+                                <tr class="text-slate-400 border-b border-slate-700">
+                                    <th class="pb-2 font-medium">Nome do Filme</th>
+                                    <th class="pb-2 font-medium">ID IMDb (tt...)</th>
+                                    <th class="pb-2 text-right">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="list-${catId}">
+                                ${films.map((f, index) => `
+                                    <tr class="border-b border-slate-700/50 last:border-0">
+                                        <td class="py-3">
+                                            <input type="text" value="${f.name}" onchange="editFilm('${catId}', ${index}, 'name', this.value)"
+                                                class="bg-transparent hover:bg-slate-900 focus:bg-slate-900 rounded px-1 w-full outline-none">
+                                        </td>
+                                        <td class="py-3 font-mono text-xs text-orange-400">
+                                            <input type="text" value="${f.id}" onchange="editFilm('${catId}', ${index}, 'id', this.value)"
+                                                class="bg-transparent hover:bg-slate-900 focus:bg-slate-900 rounded px-1 w-full outline-none">
+                                        </td>
+                                        <td class="py-3 text-right">
+                                            <button onclick="deleteFilm('${catId}', ${index})" class="text-slate-500 hover:text-red-400 transition">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                        <button onclick="openSearch('${catId}')" class="mt-4 text-sm text-blue-400 hover:text-blue-300 font-medium">
+                            <i class="fas fa-search mr-1"></i> Pesquisar e Adicionar
+                        </button>
+                    </div>
+                `;
+                container.appendChild(catDiv);
+            }
+        }
+
+        // Funções de Gerenciamento
+        function addCategory() {
+            const name = prompt("ID da categoria (ex: documentarios_financeiros):");
+            if (name && !db[name]) {
+                db[name] = [];
+                render();
+            }
+        }
+
+        function renameCategory(oldId, newId) {
+            if (newId && oldId !== newId) {
+                db[newId] = db[oldId];
+                delete db[oldId];
+                render();
+            }
+        }
+
+        function deleteCategory(catId) {
+            if (confirm(`Excluir a categoria "${catId}" e todos os filmes nela?`)) {
+                delete db[catId];
+                render();
+            }
+        }
+
+        function addFilm(catId) {
+            db[catId].push({ id: "tt0000000", name: "Novo Filme" });
+            render();
+        }
+
+        function editFilm(catId, index, field, value) {
+            db[catId][index][field] = value;
+        }
+
+        function deleteFilm(catId, index) {
+            db[catId].splice(index, 1);
+            render();
+        }
+
+        function downloadJSON() {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(db, null, 2));
+            const downloadAnchorNode = document.createElement('a');
+            downloadAnchorNode.setAttribute("href", dataStr);
+            downloadAnchorNode.setAttribute("download", "filmes.json");
+            document.body.appendChild(downloadAnchorNode);
+            downloadAnchorNode.click();
+            downloadAnchorNode.remove();
+        }
+
+        let currentAddingCat = '';
+
+        function openSearch(catId) {
+            currentAddingCat = catId;
+            document.getElementById('searchModal').classList.replace('hidden', 'flex');
+            document.getElementById('searchInput').focus();
+        }
+
+        function closeSearch() {
+            document.getElementById('searchModal').classList.replace('flex', 'hidden');
+            document.getElementById('searchResults').innerHTML = '';
+            document.getElementById('searchInput').value = '';
+        }
+
+        async function searchMovies(query) {
+            if (query.length < 3) return;
+
+            const resultsDiv = document.getElementById('searchResults');
+            // Usando a API pública do IMDb (via catálogo do Stremio/Cinemeta)
+            const url = `https://v3-cinemeta.strem.io/catalog/movie/top/search=${encodeURIComponent(query)}.json`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+                resultsDiv.innerHTML = data.metas.map(movie => `
+            <div onclick="selectMovie('${movie.id}', '${movie.name.replace(/'/g, "\\'")}')" 
+                 class="flex items-center gap-3 p-2 hover:bg-slate-700 rounded-lg cursor-pointer transition">
+                <img src="${movie.poster}" class="w-10 h-14 object-cover rounded shadow">
+                <div>
+                    <div class="font-bold text-sm">${movie.name}</div>
+                    <div class="text-xs text-slate-400">${movie.year || ''} - ${movie.id}</div>
+                </div>
+            </div>
+        `).join('');
+            } catch (e) {
+                resultsDiv.innerHTML = '<div class="text-red-400 text-sm">Erro ao buscar filmes.</div>';
+            }
+        }
+
+        function selectMovie(id, name) {
+            db[currentAddingCat].push({ id, name });
+            render();
+            closeSearch();
+        }
+    </script>
+</body>
+
+</html>

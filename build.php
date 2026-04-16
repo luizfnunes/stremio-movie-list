@@ -29,10 +29,10 @@ foreach (array_keys($filmesPorCategoria) as $catId) {
 
 // 3. Estrutura do Manifesto
 $manifest = [
-    "id" => "org.meuaddon.pessoal",
+    "id" => "io.github.luizfnunes.stremio-movie-list",
     "version" => "1.0.0",
-    "name" => "Meu Catálogo Pessoal",
-    "description" => "Lista personalizada de filmes organizada por categorias",
+    "name" => "LFS Movie List",
+    "description" => "Curadoria de Filmes Especiais",
     "resources" => ["catalog", "meta"],
     "types" => ["movie"],
     "idPrefixes" => ["tt"],

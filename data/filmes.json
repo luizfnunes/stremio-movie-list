@@ -1,28 +1,32 @@
 {
-  "categoria_favoritos": [
+  "weird_western": [
     {
-      "id": "tt0111161",
-      "name": "Um Sonho de Liberdade"
+      "id": "tt0076915",
+      "name": "The White Buffalo"
     },
     {
-      "id": "tt0137523",
-      "name": "Clube da Luta"
-    }
-  ],
-  "categoria_contabilidade": [
-    {
-      "id": "tt0068646",
-      "name": "O Poderoso Chefão"
+      "id": "tt9178402",
+      "name": "The Pale Door"
     },
     {
-      "id": "tt0108052",
-      "name": "A Lista de Schindler"
-    }
-  ],
-  "documentarios_tech": [
+      "id": "tt1648190",
+      "name": "The Dark Tower"
+    },
     {
-      "id": "tt11039814",
-      "name": "O Dilema das Redes"
+      "id": "tt2370410",
+      "name": "Revelation Trail"
+    },
+    {
+      "id": "tt0052718",
+      "name": "Curse of the Undead"
+    },
+    {
+      "id": "tt0090675",
+      "name": "The Aurora Encounter"
+    },
+    {
+      "id": "tt0039076",
+      "name": "Valley of the Zombies"
     }
   ]
 }
