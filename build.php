@@ -89,9 +89,15 @@ echo "✅ Build concluído com sucesso na pasta /public!\n";
 
 // 7. Gerar Página de Instalação (index.html)
 $addonName = $manifest['name'];
-$installUrl = "stremio://" . $_SERVER['HTTP_HOST'] ?? 'seu-usuario.github.io/seu-repo' . "/manifest.json";
-// Nota: Como o script roda via CLI, vamos usar um placeholder ou variável para a URL
-$urlFinal = "https://luizfnunes.github.io/stremio-movie-list"; // ALTERE PARA SUA URL REAL
+
+// URL base do seu GitHub Pages (Ajuste para o seu caso)
+$urlBase = "luizfnunes.github.io/stremio-movie-list"; 
+
+// Link que o Stremio entende para abrir o app automaticamente
+$installUrl = "stremio://$urlBase/manifest.json";
+
+// Link HTTP normal para caso o usuário queira copiar e colar
+$httpUrl = "https://$urlBase/manifest.json";
 
 $htmlContent = <<<HTML
 <!DOCTYPE html>
@@ -102,25 +108,28 @@ $htmlContent = <<<HTML
     <title>$addonName - Stremio Addon</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background: #0d0d12; color: white; font-family: sans-serif; }
+        body { background: #0d0d12; color: white; font-family: 'Inter', sans-serif; }
         .stremio-purple { background: #8152bf; }
+        .stremio-purple:hover { background: #6b3fa0; }
     </style>
 </head>
 <body class="flex items-center justify-center min-h-screen p-6">
     <div class="max-w-md w-full text-center bg-gray-900 p-8 rounded-2xl shadow-2xl border border-gray-800">
         <img src="https://www.stremio.com/website/stremio-logo-small.png" alt="Stremio" class="w-16 mx-auto mb-4">
         <h1 class="text-3xl font-bold mb-2">$addonName</h1>
-        <p class="text-gray-400 mb-6">Instale este catálogo personalizado diretamente no seu Stremio.</p>
+        <p class="text-gray-400 mb-6 font-light">Adicione seu catálogo personalizado ao Stremio com um clique.</p>
         
         <div class="space-y-4">
-            <a href="stremio://$urlFinal/manifest.json" 
-               class="block w-full stremio-purple hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all transform hover:scale-105">
+            <a href="$installUrl" 
+               class="block w-full stremio-purple text-white font-bold py-4 px-6 rounded-xl transition-all transform hover:scale-105 shadow-lg">
                 + INSTALAR ADDON
             </a>
             
-            <div class="text-sm text-gray-500 pt-4 border-t border-gray-800">
-                <p class="mb-2">Não funcionou? Copie o link abaixo e cole na busca de addons do Stremio:</p>
-                <code class="block bg-black p-2 rounded text-purple-400 break-all">https://$urlFinal/manifest.json</code>
+            <div class="text-sm text-gray-500 pt-6 border-t border-gray-800">
+                <p class="mb-3">Se o botão não abrir o app, copie e cole este link na busca de addons do Stremio:</p>
+                <code class="block bg-black p-3 rounded-lg text-purple-400 break-all border border-gray-700 select-all">
+                    $httpUrl
+                </code>
             </div>
         </div>
     </div>
