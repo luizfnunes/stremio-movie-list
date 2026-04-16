@@ -91,7 +91,7 @@ echo "✅ Build concluído com sucesso na pasta /public!\n";
 $addonName = $manifest['name'];
 $installUrl = "stremio://" . $_SERVER['HTTP_HOST'] ?? 'seu-usuario.github.io/seu-repo' . "/manifest.json";
 // Nota: Como o script roda via CLI, vamos usar um placeholder ou variável para a URL
-$urlFinal = "https://seu-usuario.github.io/seu-repo"; // ALTERE PARA SUA URL REAL
+$urlFinal = "https://luizfnunes.github.io/stremio-movie-list"; // ALTERE PARA SUA URL REAL
 
 $htmlContent = <<<HTML
 <!DOCTYPE html>
