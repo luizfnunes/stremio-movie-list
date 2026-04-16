@@ -1,0 +1,31 @@
+name: Deploy Stremio Addon
+
+on:
+  push:
+    branches:
+      - main  # Ou o nome da sua branch principal
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2' # Versão estável do PHP
+
+      - name: Gerar arquivos do Addon
+        run: php build.php
+
+      - name: Deploy para GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: public # Pasta que o seu script PHP gera
+          branch: gh-pages # Branch onde os arquivos estáticos ficarão hospedados
