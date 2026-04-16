@@ -1,0 +1,28 @@
+{
+  "categoria_favoritos": [
+    {
+      "id": "tt0111161",
+      "name": "Um Sonho de Liberdade"
+    },
+    {
+      "id": "tt0137523",
+      "name": "Clube da Luta"
+    }
+  ],
+  "categoria_contabilidade": [
+    {
+      "id": "tt0068646",
+      "name": "O Poderoso Chefão"
+    },
+    {
+      "id": "tt0108052",
+      "name": "A Lista de Schindler"
+    }
+  ],
+  "documentarios_tech": [
+    {
+      "id": "tt11039814",
+      "name": "O Dilema das Redes"
+    }
+  ]
+}

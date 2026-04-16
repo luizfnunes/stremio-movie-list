@@ -1,0 +1,6 @@
+services:
+  builder:
+    build: .
+    volumes:
+      - .:/app
+    container_name: stremio_addon_builder
