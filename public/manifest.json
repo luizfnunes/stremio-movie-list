@@ -16,13 +16,18 @@
     "catalogs": [
         {
             "type": "movie",
-            "id": "weird_western",
+            "id": "Terror e Tempestade",
+            "name": "Terror E Tempestade"
+        },
+        {
+            "type": "movie",
+            "id": "Weird Western",
             "name": "Weird Western"
         },
         {
             "type": "movie",
-            "id": "terror_e_tempestade",
-            "name": "Terror E Tempestade"
+            "id": "Taboo",
+            "name": "Taboo"
         }
     ]
 }
