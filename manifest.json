@@ -18,6 +18,11 @@
             "type": "movie",
             "id": "weird_western",
             "name": "Weird Western"
+        },
+        {
+            "type": "movie",
+            "id": "terror_e_tempestade",
+            "name": "Terror E Tempestade"
         }
     ]
 }
