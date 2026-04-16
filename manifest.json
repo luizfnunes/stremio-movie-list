@@ -1,8 +1,8 @@
 {
-    "id": "org.meuaddon.pessoal",
+    "id": "io.github.luizfnunes.stremio-movie-list",
     "version": "1.0.0",
-    "name": "Meu Cat\u00e1logo Pessoal",
-    "description": "Lista personalizada de filmes organizada por categorias",
+    "name": "LFS Movie List",
+    "description": "Curadoria de Filmes Especiais",
     "resources": [
         "catalog",
         "meta"
@@ -16,18 +16,8 @@
     "catalogs": [
         {
             "type": "movie",
-            "id": "categoria_favoritos",
-            "name": "Categoria Favoritos"
-        },
-        {
-            "type": "movie",
-            "id": "categoria_contabilidade",
-            "name": "Categoria Contabilidade"
-        },
-        {
-            "type": "movie",
-            "id": "documentarios_tech",
-            "name": "Documentarios Tech"
+            "id": "weird_western",
+            "name": "Weird Western"
         }
     ]
 }
