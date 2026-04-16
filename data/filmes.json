@@ -1,32 +1,74 @@
 {
-  "weird_western": [
-    {
-      "id": "tt0076915",
-      "name": "The White Buffalo"
-    },
-    {
-      "id": "tt9178402",
-      "name": "The Pale Door"
-    },
-    {
-      "id": "tt1648190",
-      "name": "The Dark Tower"
-    },
-    {
-      "id": "tt2370410",
-      "name": "Revelation Trail"
-    },
-    {
-      "id": "tt0052718",
-      "name": "Curse of the Undead"
-    },
-    {
-      "id": "tt0090675",
-      "name": "The Aurora Encounter"
-    },
-    {
-      "id": "tt0039076",
-      "name": "Valley of the Zombies"
-    }
-  ]
+    "weird_western": [
+        {
+            "id": "tt0076915",
+            "name": "The White Buffalo"
+        },
+        {
+            "id": "tt9178402",
+            "name": "The Pale Door"
+        },
+        {
+            "id": "tt1648190",
+            "name": "The Dark Tower"
+        },
+        {
+            "id": "tt2370410",
+            "name": "Revelation Trail"
+        },
+        {
+            "id": "tt0052718",
+            "name": "Curse of the Undead"
+        },
+        {
+            "id": "tt0090675",
+            "name": "The Aurora Encounter"
+        },
+        {
+            "id": "tt0039076",
+            "name": "Valley of the Zombies"
+        }
+    ],
+    "terror_e_tempestade": [
+        {
+            "id": "tt0076786",
+            "name": "Suspiria "
+        },
+        {
+            "id": "tt0086050",
+            "name": "One Dark Night "
+        },
+        {
+            "id": "tt0080516",
+            "name": "The Changeling "
+        },
+        {
+            "id": "tt0071200",
+            "name": "The Beast Must Die "
+        },
+        {
+            "id": "tt0109550",
+            "name": "Dark Waters "
+        },
+        {
+            "id": "tt0084694",
+            "name": "The Slayer "
+        },
+        {
+            "id": "tt0070294",
+            "name": "The Legend of Hell House "
+        },
+        {
+            "id": "tt0076630",
+            "name": "Rituals "
+        },
+        {
+            "id": "tt0085385",
+            "name": "Curtains "
+        },
+        {
+            "id": "tt0072239",
+            "name": "Symptoms "
+        }
+    ]
 }
