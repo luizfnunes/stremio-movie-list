@@ -28,6 +28,16 @@
             "type": "movie",
             "id": "Taboo",
             "name": "Taboo"
+        },
+        {
+            "type": "movie",
+            "id": "Techno SciFy Antigo",
+            "name": "Techno SciFy Antigo"
+        },
+        {
+            "type": "movie",
+            "id": "Video Game SciFy",
+            "name": "Video Game SciFy"
         }
     ]
 }
