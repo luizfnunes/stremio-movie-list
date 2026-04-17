@@ -38,6 +38,11 @@
             "type": "movie",
             "id": "Video Game SciFy",
             "name": "Video Game SciFy"
+        },
+        {
+            "type": "movie",
+            "id": "Robos Assassinos",
+            "name": "Robos Assassinos"
         }
     ]
 }
