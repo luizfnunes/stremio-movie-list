@@ -108,5 +108,93 @@
             "id": "tt0091117",
             "name": "The Girl "
         }
+    ],
+    "Techno SciFy Antigo": [
+        {
+            "id": "tt0119794",
+            "name": "Nirvana "
+        },
+        {
+            "id": "tt0113481",
+            "name": "Johnny Mnemonic "
+        },
+        {
+            "id": "tt0114648",
+            "name": "Terminal Justice "
+        },
+        {
+            "id": "tt0113220",
+            "name": "Virtual Combat"
+        },
+        {
+            "id": "tt0112867",
+            "name": "Digital Man "
+        },
+        {
+            "id": "tt0300902",
+            "name": "Absolon "
+        },
+        {
+            "id": "tt0114857",
+            "name": "Virtuosity "
+        },
+        {
+            "id": "tt0107668",
+            "name": "Nemesis "
+        },
+        {
+            "id": "tt0117238",
+            "name": "Omega Doom "
+        },
+        {
+            "id": "tt0099277",
+            "name": "Class of 1999 "
+        }
+    ],
+    "Video Game SciFy": [
+        {
+            "id": "tt0112993",
+            "name": "Evolver "
+        },
+        {
+            "id": "tt0106302",
+            "name": "Arcade (1993)"
+        },
+        {
+            "id": "tt0330203",
+            "name": "Net Games "
+        },
+        {
+            "id": "tt1034032",
+            "name": "Gamer "
+        },
+        {
+            "id": "tt0120907",
+            "name": "eXistenZ "
+        },
+        {
+            "id": "tt0109327",
+            "name": "Brainscan "
+        },
+        {
+            "id": "tt0441796",
+            "name": "Stay Alive "
+        },
+        {
+            "id": "tt0084827",
+            "name": "Tron "
+        },
+        {
+            "id": "tt0414036",
+            "name": "Game Box 1.0 "
+        },
+        {
+            "id": "tt0267287",
+            "name": "Avalon "
+        },
+        {
+            "id": "tt0281919",
+            "name": "How to Make a Monster "
+        }
     ]
 }
