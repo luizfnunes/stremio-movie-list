@@ -153,10 +153,6 @@
     ],
     "Video Game SciFy": [
         {
-            "id": "tt0112993",
-            "name": "Evolver "
-        },
-        {
             "id": "tt0106302",
             "name": "Arcade (1993)"
         },
@@ -195,6 +191,68 @@
         {
             "id": "tt0281919",
             "name": "How to Make a Monster "
+        }
+    ],
+    "Robos Assassinos": [
+        {
+            "id": "tt0112993",
+            "name": "Evolver "
+        },
+        {
+            "id": "tt0109575",
+            "name": "Death Machine "
+        },
+        {
+            "id": "tt0255623",
+            "name": "Subterano "
+        },
+        {
+            "id": "tt0100586",
+            "name": "Shadowzone "
+        },
+        {
+            "id": "tt0120458",
+            "name": "Virus "
+        },
+        {
+            "id": "tt0283542",
+            "name": "Terminal Error "
+        },
+        {
+            "id": "tt0088024",
+            "name": "Runaway "
+        },
+        {
+            "id": "tt0090837",
+            "name": "Chopping Mall "
+        },
+        {
+            "id": "tt0079285",
+            "name": "Saturn 3 "
+        },
+        {
+            "id": "tt0114367",
+            "name": "Screamers "
+        },
+        {
+            "id": "tt0090917",
+            "name": "Deadly Friend "
+        },
+        {
+            "id": "tt0098156",
+            "name": "R.O.T.O.R. "
+        },
+        {
+            "id": "tt0097911",
+            "name": "Moontrap "
+        },
+        {
+            "id": "tt0092172",
+            "name": "The Vindicator "
+        },
+        {
+            "id": "tt0096341",
+            "name": "Uninvited "
         }
     ]
 }
