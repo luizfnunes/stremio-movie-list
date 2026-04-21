@@ -16,11 +16,6 @@
     "catalogs": [
         {
             "type": "movie",
-            "id": "Terror e Tempestade",
-            "name": "Terror E Tempestade"
-        },
-        {
-            "type": "movie",
             "id": "Weird Western",
             "name": "Weird Western"
         },
@@ -43,6 +38,16 @@
             "type": "movie",
             "id": "Robos Assassinos",
             "name": "Robos Assassinos"
+        },
+        {
+            "type": "movie",
+            "id": "Terror e Tempestades",
+            "name": "Terror E Tempestades"
+        },
+        {
+            "type": "movie",
+            "id": "Tensos dos anos 70",
+            "name": "Tensos Dos Anos 70"
         }
     ]
 }
