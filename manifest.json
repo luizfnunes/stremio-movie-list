@@ -48,6 +48,11 @@
             "type": "movie",
             "id": "Tensos dos anos 70",
             "name": "Tensos Dos Anos 70"
+        },
+        {
+            "type": "movie",
+            "id": "J-Horror Sobrenatural",
+            "name": "J Horror Sobrenatural"
         }
     ]
 }
