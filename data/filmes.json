@@ -384,5 +384,39 @@
             "id": "tt0075931",
             "name": "Demon Seed "
         }
+    ],
+    "J-Horror Sobrenatural": [
+        {
+            "id": "tt0213245",
+            "name": "Shikoku "
+        },
+        {
+            "id": "tt0286751",
+            "name": "Pulse "
+        },
+        {
+            "id": "tt0330500",
+            "name": "Ju-on: The Curse "
+        },
+        {
+            "id": "tt0308379",
+            "name": "Dark Water "
+        },
+        {
+            "id": "tt0123948",
+            "name": "Cure "
+        },
+        {
+            "id": "tt0235198",
+            "name": "Audition "
+        },
+        {
+            "id": "tt0244870",
+            "name": "Spiral "
+        },
+        {
+            "id": "tt0122136",
+            "name": "Black Cat "
+        }
     ]
 }
