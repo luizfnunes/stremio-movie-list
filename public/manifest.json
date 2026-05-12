@@ -53,6 +53,11 @@
             "type": "movie",
             "id": "J-Horror Sobrenatural",
             "name": "J Horror Sobrenatural"
+        },
+        {
+            "type": "movie",
+            "id": "Terror anos 30",
+            "name": "Terror Anos 30"
         }
     ]
 }

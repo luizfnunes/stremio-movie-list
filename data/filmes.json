@@ -418,5 +418,155 @@
             "id": "tt0122136",
             "name": "Black Cat "
         }
+    ],
+    "Terror anos 30": [
+        {
+            "id": "tt0020668",
+            "name": "The Bat Whispers "
+        },
+        {
+            "id": "tt0021016",
+            "name": "Just Imagine "
+        },
+        {
+            "id": "tt0020638",
+            "name": "Der Andere "
+        },
+        {
+            "id": "tt0020635",
+            "name": "Alraune "
+        },
+        {
+            "id": "tt0020748",
+            "name": "The Cat Creeps "
+        },
+        {
+            "id": "tt0017947",
+            "name": "The Gorilla "
+        },
+        {
+            "id": "tt0202385",
+            "name": "Hai-Tang "
+        },
+        {
+            "id": "tt0022264",
+            "name": "The Phantom of Paris "
+        },
+        {
+            "id": "tt0021814",
+            "name": "Dracula "
+        },
+        {
+            "id": "tt0021815",
+            "name": "Drácula "
+        },
+        {
+            "id": "tt0022835",
+            "name": "Dr. Jekyll and Mr. Hyde "
+        },
+        {
+            "id": "tt0022454",
+            "name": "Svengali "
+        },
+        {
+            "id": "tt0023249",
+            "name": "Murders in the Rue Morgue "
+        },
+        {
+            "id": "tt0022913",
+            "name": "Freaks "
+        },
+        {
+            "id": "tt0023694",
+            "name": "White Zombie "
+        },
+        {
+            "id": "tt0024188",
+            "name": "Island of Lost Souls "
+        },
+        {
+            "id": "tt0023293",
+            "name": "The Old Dark House "
+        },
+        {
+            "id": "tt0022827",
+            "name": "Doctor X "
+        },
+        {
+            "id": "tt0023649",
+            "name": "Vampyr "
+        },
+        {
+            "id": "tt0023238",
+            "name": "The Most Dangerous Game "
+        },
+        {
+            "id": "tt0022753",
+            "name": "Chandu the Magician "
+        },
+        {
+            "id": "tt0024368",
+            "name": "Mystery of the Wax Museum "
+        },
+        {
+            "id": "tt0024055",
+            "name": "The Ghoul "
+        },
+        {
+            "id": "tt0023938",
+            "name": "Deluge "
+        },
+        {
+            "id": "tt0024184",
+            "name": "The Invisible Man "
+        },
+        {
+            "id": "tt0024216",
+            "name": "King Kong "
+        },
+        {
+            "id": "tt0024631",
+            "name": "Supernatural "
+        },
+        {
+            "id": "tt0024727",
+            "name": "The Vampire Bat "
+        },
+        {
+            "id": "tt0023235",
+            "name": "The Monkeys Paw "
+        },
+        {
+            "id": "tt0024360",
+            "name": "Murders in the Zoo "
+        },
+        {
+            "id": "tt0026663",
+            "name": "Mad Love "
+        },
+        {
+            "id": "tt0026138",
+            "name": "Bride of Frankenstein "
+        },
+        {
+            "id": "tt0026123",
+            "name": "The Black Room "
+        },
+        {
+            "id": "tt0027194",
+            "name": "Werewolf of London "
+        },
+        {
+            "id": "tt0026912",
+            "name": "The Raven "
+        },
+        {
+            "id": "tt0026685",
+            "name": "Mark of the Vampire "
+        },
+        {
+            "id": "tt0027479",
+            "name": "The Crime of Doctor Crespi "
+        }
     ]
 }
